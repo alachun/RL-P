@@ -1,0 +1,11 @@
+n_steps,time,mean_reward
+444,0h1min0s,0.63
+963,0h2min1s,0.73
+1554,0h3min1s,0.82
+2191,0h4min2s,0.89
+3077,0h5min3s,0.92
+4665,0h6min3s,0.97
+7144,0h7min3s,0.98
+11523,0h8min3s,1.0
+17381,0h9min3s,1.0
+22176,0h10min3s,1.0
