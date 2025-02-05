@@ -1,72 +1,72 @@
-# RL-P
+## Project Description
 
-## 项目说明
+This project implements multiple algorithms, including RL-P, RL-P(no mask), A2C, and HAC. Below is the structure of the project and instructions for its use.
 
-本项目实现了多种算法，包括RL-P、RL-P(no mask)、A2C和HAC，主要针对特定的环境进行训练和测试。以下是该项目的结构及使用说明。
-
-## 项目结构
+## Project Structure
 
 
 ```
 
 RL-P/
 │
-├── code/                     # 源代码文件夹
-│   ├── RL-P/                 # RL-P相关代码
+├── code/                     # Source code folder
+│   ├── RL-P/                 # RL-P code
 │   │   ├── child_snack_gym.py
 │   │   ├── child_snack_gym2.py
 │   │   ├── citycar_gym.py
 │   │   ├── citycar_gym2.py
 |   │   ├── ...
-│   │   ├── pddlgym_data/     # 注册时使用的PDDL文件
-│   │   ├── main.py           # 主程序，调用环境进行训练
-│   |   └── model_test.py     # 测试程序
+│   │   ├── pddlgym_data/     # PDDL files used for registration
+│   │   ├── main.py           # Main program, used to call environments for training
+│   |   └── model_test.py     # Testing program
 │   │
-│   └── HAC1/                 # HAC相关代码
-│       └── ...               # HAC相关代码文件
+│   └── HAC1/                 # HAC code
+│       └── ...               # HAC code files
 │   
 │
-├── data/                     # 原始PDDL文件
-│   └── ...                   # 原始PDDL文件
+├── data/                     # Original PDDL files
+│   └── ...                   # Original PDDL files
 │
-├── requirements.txt          # 项目依赖库
-└── log/                      # 测试结果存放文件夹
+├── requirements.txt          # Project dependencies
+└── log/                      # Folder for storing test results
 ```
  
 
 
-## 环境注册
+## Environment Registration
 
-在执行代码之前，请先注册 pddlgym 环境。注册流程详见  https://github.com/tomsilver/pddlgym。
+Before executing the code, please register the pddlgym environment. The registration process is detailed at https://github.com/tomsilver/pddlgym.
 
-由于 pddlgym 不支持条件效果和动作成本，本项目对原文件做了一些删改，注册时使用的 PDDL 文件位于 RL-P/pddlgym_data 文件夹内。原 PDDL 文件位于 data 文件夹中。
+Since pddlgym does not support conditional effects and action costs, this project has made some modifications to the original files. The PDDL files used for registration are located in the RL-P/pddlgym_data folder. The original PDDL files are stored in the data folder.
 
-### 使用说明
+### Usage Instructions
 
-child_snack_gym.py，child_snack_gym2.py，citycar_gym.py，citycar_gym2.py是RL-P算法相应问题的gym环境，RL-P(no mask)使用同样的gym环境。childsnack_pddlgym2.py，chilsnack_pddlgym.py，citycar_pddlgym.py，citycar_pddlgym2.py为相应问题的pddlgym环境。在main.py中调用相应问题的环境进行训练，在model_test.py中进行测试。测试结果位于log文件夹中。
+child_snack_gym.py, child_snack_gym2.py, citycar_gym.py, and citycar_gym2.py are the gym environments for the corresponding problems of the RL-P algorithm. RL-P(no mask) uses the same gym environments.
+childsnack_pddlgym2.py, chilsnack_pddlgym.py, citycar_pddlgym.py, and citycar_pddlgym2.py are the corresponding pddlgym environments for the problems.
+In main.py, the corresponding environments are called for training, and in model_test.py, the model is tested. The test results are stored in the log folder.
 
-### 安装依赖
+### Install Dependencies
 
-使用以下命令安装项目所需的依赖库：
+Use the following command to install the required dependencies for the project:
 ```python
 
 pip install -r requirements.txt
 ```
 
-### 训练模型
+### Training the Model
 
-运行 main.py 文件以开始训练相应问题的环境。可以根据需要修改代码以选择不同的环境和算法。
+Run the main.py file to start training the corresponding environment. You can modify the code as needed to select different environments and algorithms.
+### Testing the Model
 
-### 测试模型
+After training is complete, you can use the model_test.py file to test the model.
 
-训练完成后，可以使用 model_test.py 文件进行模型测试。
+### Notes
 
-### 注意事项
+Ensure that the pddlgym environment is correctly registered before executing the code.
 
-请确保在执行代码之前，已正确注册 pddlgym 环境。
-根据需要调整代码中的参数，以适应不同的实验需求。
+Adjust the parameters in the code as needed to suit different experimental requirements.
 
-## 结语
+## Acknowledgments
 
 
-感谢您使用本项目，希望本项目能对您的研究或工作有所帮助！
+Thank you for using this project. We hope it will be helpful for your research or work!
